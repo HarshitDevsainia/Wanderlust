@@ -33,7 +33,7 @@ To run the Wanderlust Technologies website locally, follow these steps:
 
 4. Run the application:
 
-   npm start
+   node app.js
 
 5. Access the website in your browser at [http://localhost:8080/listings].
 
