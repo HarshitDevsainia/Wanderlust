@@ -1,0 +1,360 @@
+body{
+   font-family: 'Plus Jakarta Sans', sans-serif !important;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   overflow-x:hidden;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-otter{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color:#222222 !important;
+}
+
+/* nav-bottom */
+
+.filter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.filter-box{
+    margin: 0.5rem 1rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+.filter-box:hover{
+    opacity: 1;
+}
+.tax-switch{
+    width: 15rem;
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-left:2rem;
+    font-size: 0.75rem;
+}
+/* tax-info */
+.tax-info{
+    display: none;
+    margin-left: 1rem;
+}
+/* Scroller */
+
+.scroll-container {
+overflow-x: hidden; /* Hide the horizontal scrollbar */
+white-space: nowrap;
+width: 100%;
+display: flex;
+align-items: center;
+}
+.scroll-row {
+    display: inline-flex;
+}
+.prev-btn,.next-btn {
+    width: 35px;
+    height: 30px;
+    color: black;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+
+/* footer */
+.f-info{
+    height: 8rem;
+    display: flex;
+    background-color: #dbdada98;
+    opacity: 1.0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid rgb(109, 109, 109);
+    color: white;
+}
+.f-social-link a i{
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: black;
+}
+.f-wonderlust{
+    font-weight: bold;
+    color: black;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    color: blue;
+}
+.search-bar{
+    width: 17rem !important;
+    margin-right: 0.5rem;
+    border-radius: 1rem !important;
+}
+.search-btn{
+    border: 1px solid #fe424d !important;
+    border-radius:1rem !important;
+    background-color: #fe424d !important;
+    color: white !important;
+}
+
+@media screen and (min-width: 765px) and (max-width: 835px) {
+    .search-btn{
+        width: 3rem !important;
+    }
+    .search-btn-text{
+        display: none;
+    }
+}
+/* Index Style */
+
+.card-listing{
+    margin: 1rem;
+    width: 20rem !important;
+}
+.card-listing:hover{
+    box-shadow: 3px 2px 12px black ;
+}
+
+.card img{
+    width: 100%;
+    object-fit: cover;
+    height: 15rem;
+    padding-top: 0.5rem;
+    border-radius: 1rem;
+}
+.card a{
+    text-decoration: none;
+    color: #222222;
+}
+
+/* new style  */
+
+.heading{
+    text-align: center;
+}
+.add-btn{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* edit style  */
+
+.edit-btn{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fe424d !important;
+    border:none !important;
+}
+
+/* show style  */
+
+.heading{
+    margin-bottom: 1rem;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.edit,.delete{
+    border: none !important;
+    background-color: #fe424d !important;
+}
+.details-card{
+    border: none !important;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Error box */
+
+.error-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-msg{
+    text-align: center;
+}
+.error-img img{
+    border-radius: 2rem;
+}
+
+/* Review Style  */
+.rating-box{
+    display: flex;
+    padding: 0.1rem;
+}
+.rating-star{
+    color: #fdcc0d;
+}
+
+/* signup */
+.signup{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-box{
+    width: 100%;
+}
+.signup-box-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-main{
+    width: 60%;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+/* Login */
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-box{
+    width: 100%;
+    height: 70vh;
+}
+.login{
+    width: 100%;
+}
+.login-main{
+    width: 30rem !important;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* Map Style   */
+
+.map-style{
+    width: 100%;
+    height: 400px;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Media query */
+@media screen and (min-width:1400px) and (max-width:2462px) {
+    .card-listing{
+        width: 18.5rem !important;
+    }
+}
+@media screen and (min-width:1200px) and (max-width:1400px) {
+    .card-listing{
+        width: 21rem !important;
+    }
+}
+@media screen and (min-width:990px) and (max-width:1200px) {
+    .card-listing{
+        width: 18rem !important;
+    }
+    .tax-switch{
+        width: 18rem;
+    }
+}
+@media screen and (min-width:767px) and (max-width:990px) {
+    .card-listing{
+        width: 20rem !important;
+    }
+    .tax-switch{
+        width: 22rem;
+    }
+    .create-list{
+        /* font-size: 0.9rem !important; */
+        text-align: center;
+    }
+}
+@media screen and (min-width:550px) and (max-width:767px) {
+    .card-listing{
+        width: 14.5rem !important;
+    }
+    .tax-switch{
+        width: 25rem;
+    }
+    .review-card{
+        margin: 1rem !important;
+        width: 46% !important;
+    }
+    .signup-main{
+        width: 70%;
+    }
+}
+@media screen and (min-width:437px) and (max-width:550px) {
+    .card-listing{
+        width: 95% !important;
+    }
+    .tax-switch{
+        display: none;
+    }
+    .review-card{
+        margin: 1rem !important;
+        width: 90% !important;
+    }
+    .login-main{
+        width: 25rem !important;
+    }
+    .signup-main{
+        width: 80%;
+    }
+}
+@media screen and (max-width:437px) {
+    .card-listing{
+        width: 90% !important;
+    }
+    .tax-switch{
+        display: none;
+    }
+    .search-btn{
+        width: 3rem !important;
+    }
+    .search-btn-text{
+        display: none;
+    }
+    .review-card{
+        margin: 1rem !important;
+        width: 90% !important;
+    }
+    .login-main{
+        width: 20rem !important;
+    }
+    .signup-main{
+        width: 90%;
+    }
+}

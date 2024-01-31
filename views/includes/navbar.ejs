@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-solid fa-otter"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ms-auto " id="navbarNav">
+        <a class="nav-link" href="/listings">Explore</a>
+        <div class="navbar-nav ms-auto">
+          <form class="form-inline flex" method="GET" action="/listings">
+            <input class="form-control mr-sm-2 search-bar" type="search" name="Search" placeholder="Search Destination">
+            <button class="btn btn-outline-success my-2 my-sm-0 search-btn" 
+                  type="submit"><i class="fa-solid fa-magnifying-glass search-btn-glass"></i> <span class="search-btn-text">Search</span></button>
+          </form>
+        </div>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link create-list" href="/listings/new">Wnaderlust your Home</a>
+            <% if(!curruser) {%>
+              <a class="nav-link" href="/signup"><b>SignUp</b></a>
+              <a class="nav-link" href="/login"><b>LogIn</b></a>
+            <% } %>
+            <% if(curruser) {%>
+              <a class="nav-link" href="/logout"><b>LogOut</b></a>
+            <% } %>
+        </div>
+       </div>
+      </div>
+    </div>
+  </nav>

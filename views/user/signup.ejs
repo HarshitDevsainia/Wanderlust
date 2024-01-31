@@ -1,0 +1,31 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+<body class="signup-body">
+   <div class="signup">
+    <div class="row signup-box">
+        <form method="post" action="/signup" class="row g-3 needs-validation" novalidate >
+            <div class="signup-box-2">
+                <div class="signup-main">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" name="username" placeholder="Enter Username" class="form-control" required>
+                        <div class="valid-feedback">Username Looks good!</div>  
+                        <div class="invalid-feedback">Please enter the Username</div>  
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" placeholder="Enter Email" class="form-control" required>  
+                        <div class="invalid-feedback">Please enter Email</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" placeholder="Enter Password" class="form-control" required>
+                        <div class="invalid-feedback">Please Enter a secure Password</div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-success">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+   </div>
+</body>
