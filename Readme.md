@@ -1,6 +1,6 @@
 # Wanderlust Technologies
 
-Wanderlust Technologies is a full-stack website built using Node.js, Express.js, HTML, CSS, and MongoDB. It offers a comprehensive suite of features including user authentication (signup/login) and CRUD operations. The website is designed to be fully responsive, ensuring a seamless experience across various devices.
+Wanderlust Technologies is a full-stack website built using Node.js, Express.js, HTML, CSS, Bootstrap , and MongoDB. It offers a comprehensive suite of features including user authentication (signup/login) and CRUD operations. The website is designed to be fully responsive, ensuring a seamless experience across various devices.
 
 ## Introduction
 
@@ -33,7 +33,7 @@ To run the Wanderlust Technologies website locally, follow these steps:
 
 4. Run the application:
 
-   npm start
+   node app.js
 
 5. Access the website in your browser at [http://localhost:8080/listings].
 
