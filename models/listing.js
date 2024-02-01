@@ -12,6 +12,11 @@ const listingSchema=new Schema({
         filename:String,
         url:String,
     },
+    category:{
+        type:String,
+        enum:['Trending','Rooms','Iconic Center','mountains','castles','Amazing pools','Camping','farms','Arctic','Domes','Boats','Creative Spaces','Golfing','Beach'],
+        required:true,
+    },
     price:Number,
     location:String,
     country:String,
