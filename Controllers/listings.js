@@ -4,23 +4,35 @@ const mapToken=process.env.mapToken;
 const geocodingClient=mbxGeoCoding({ accessToken: mapToken});
 
 module.exports.RenderIndexPage=async(req,res)=>{
-    let {Search}=req.query;
+    let {Search,category}=req.query;
     let data = await listing.find();
-    if(Search===undefined || Search===''){
+    
+    if((Search===undefined || Search==='') && (category==='' || category===undefined)){
         res.render('listings/index.ejs',{data});
     }
     else{
         let SearchData=[];
-        for(let ss of data){
-           let des=ss.location;
-           let country=ss.country;
-           
-           if(Search.toLowerCase()===des.toLowerCase() || Search.toLowerCase()===country.toLowerCase()){
-              SearchData.push(ss);
-           }
+        if(category==='' || category===undefined){
+            for(let ss of data){
+                let des=ss.location;
+                let country=ss.country;
+                
+                if(Search.toLowerCase()===des.toLowerCase() || Search.toLowerCase()===country.toLowerCase()){
+                   SearchData.push(ss);
+                }
+             }
         }
+        else{
+            for(let ss of data){
+                let Orgcategory=ss.category;
+                if(category===Orgcategory){
+                    SearchData.push(ss);
+                }
+             }
+        }
+
         if(SearchData.length==0){
-            req.flash('error','Sorry Not Available! OR Give the Correct Destination');
+            req.flash('error','Sorry Not Available!');
             res.redirect('/listings');
         }
         else{

@@ -16,7 +16,7 @@
                 <p><b>&#8377 <%= list.price.toLocaleString('en-IN')%> </b></p>
                 <p><%= list.location %> </p>
                 <p><%= list.country %></p>
-                <p>Creater:@<%= list.owner.username  %> </p>
+                <p><b>Creater:</b>@<%= list.owner.username%>  &nbsp &nbsp &nbsp &nbsp <b>category:</b><%= list.category %></p>
               </p>
               <%if(curruser && curruser._id.equals(list.owner._id)) {%>
                 <div class="row">

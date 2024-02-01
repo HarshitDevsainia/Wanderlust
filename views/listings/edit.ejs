@@ -26,6 +26,26 @@
                   <div class="valid-feedback">Good!</div>  
                   <div class="invalid-feedback">Enter the URL</div>
                 </div>
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">Category</label>
+                  <select class="form-select" aria-label="Default select example" name="listing[category]" required>
+                      <option selected><%= list.category %></option>
+                      <option value="Trending">Trending</option>
+                      <option value="Rooms">Rooms</option>
+                      <option value="Iconic Center">Iconic Center</option>
+                      <option value="mountains">mountains</option>
+                      <option value="castles">castles</option>
+                      <option value="Amazing pools">Amazing pools</option>
+                      <option value="Camping">Camping</option>
+                      <option value="farms">farms</option>
+                      <option value="Arctic">Arctic</option>
+                      <option value="Domes">Domes</option>
+                      <option value="Boats">Boats</option>
+                      <option value="Creative Spaces">Creative Spaces</option>
+                      <option value="Golfing">Golfing</option>
+                      <option value="Beach">Beach</option>
+                  </select>
+                </div>
                   <div class="row">
                     <div class="mb-3 col-4">
                         <label for="price" class="form-label">Price</label>

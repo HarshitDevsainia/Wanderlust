@@ -34,7 +34,7 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
-    opacity: 0.75;
+    opacity: 0.55;
 }
 .filter-box:hover{
     opacity: 1;
@@ -52,14 +52,16 @@ body{
     display: none;
     margin-left: 1rem;
 }
+
 /* Scroller */
 
 .scroll-container {
-overflow-x: hidden; /* Hide the horizontal scrollbar */
+overflow: hidden; /* Hide the horizontal scrollbar */
 white-space: nowrap;
 width: 100%;
 display: flex;
 align-items: center;
+margin-bottom: 1rem;
 }
 .scroll-row {
     display: inline-flex;
@@ -75,6 +77,11 @@ align-items: center;
     outline: none;
     margin-right: 0.5rem;
     font-size: 1rem;
+}
+.category-btn{
+    height: 3rem;
+    background-color: white;
+    border: none;
 }
 
 
