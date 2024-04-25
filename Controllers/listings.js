@@ -5,40 +5,60 @@ const geocodingClient=mbxGeoCoding({ accessToken: mapToken});
 
 module.exports.RenderIndexPage=async(req,res)=>{
     let {Search,category}=req.query;
-    let data = await listing.find();
-    
     if((Search===undefined || Search==='') && (category==='' || category===undefined)){
+        let data = await listing.find();
         res.render('listings/index.ejs',{data});
     }
-    else{
-        let SearchData=[];
-        if(category==='' || category===undefined){
-            for(let ss of data){
-                let des=ss.location;
-                let country=ss.country;
-                
-                if(Search.toLowerCase()===des.toLowerCase() || Search.toLowerCase()===country.toLowerCase()){
-                   SearchData.push(ss);
-                }
-             }
-        }
-        else{
-            for(let ss of data){
-                let Orgcategory=ss.category;
-                if(category===Orgcategory){
-                    SearchData.push(ss);
-                }
-             }
-        }
-
-        if(SearchData.length==0){
-            req.flash('error','Sorry Not Available!');
+    else if(category=='' || category==undefined){
+        let Searchdata=await listing.find({$or:[{location:{$regex:Search,$options:'i'}},{country:{$regex:Search,$options:'i'}}]});
+        if(Searchdata.length==0){
+            req.flash('error','Sorry Listing not Available');
             res.redirect('/listings');
         }
         else{
-            res.render('listings/index.ejs',{data:SearchData});
+            res.render('listings/index.ejs',{data:Searchdata});
         }
-    } 
+    }
+    else{
+        let categoryData=await listing.find({category:category});
+        if(categoryData.length==0){
+            req.flash('error','Sorry Listing not Available');
+            res.redirect('/listings');
+        }
+        else{
+            res.render('listings/index.ejs',{data:categoryData});
+        }
+    }
+
+    // else{
+    //     console.log(Search,category);
+    //     let SearchData=[];
+        // if(category==='' || category===undefined){
+        //     for(let ss of data){
+        //         let des=ss.location;
+        //         let country=ss.country;
+                
+        //         if(Search.toLowerCase()===des.toLowerCase() || Search.toLowerCase()===country.toLowerCase()){
+        //            SearchData.push(ss);
+        //         }
+        //      }
+        // }
+        // else{
+        //     for(let ss of data){
+        //         let Orgcategory=ss.category;
+        //         if(category===Orgcategory){
+        //             SearchData.push(ss);
+        //         }
+        //      }
+        // }
+
+        // if(SearchData.length==0){
+        //     req.flash('error','Sorry Not Available!');
+        //     res.redirect('/listings');
+        // }
+        // else{
+        //     res.render('listings/index.ejs',{data:SearchData});
+        // }
 };
 
 module.exports.RenderNewPage=(req,res)=>{
